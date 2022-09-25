@@ -84,12 +84,17 @@ a {
 }
 
 a:visited {
-    color: var(--darkOlive);
+    color: inherit;
 }
 
 main div img {
     border: 5px solid var(--tan1);
     filter: grayscale(75%);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 main div img:hover {
@@ -98,20 +103,11 @@ main div img:hover {
     filter: none;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
 .sub-head {
     background-color: var(--skyBlue);
     text-align: right;
     margin: 0;
     padding: 0;
-}
-
-#subtitle {
-    background-color: var(--pink2);
 }
 
 .grid-container {
@@ -159,6 +155,18 @@ img {
     max-height: 100%;
 }
 
+.image-container {
+    display: grid; 
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas:
+        "image-lead image-lead"
+        "image-lead image-lead"
+        "image-minor1 image-minor2"
+        "image-minor3 image-minor4";
+        min-width: 0;
+}
+
 .contactMeHeader {
     grid-area: contactMeHeader;
     height:100%;
@@ -176,24 +184,15 @@ img {
     margin-top: 10%
 }
 
+#subtitle {
+    background-color: var(--pink2);
+}
+
 #body-header {
     color: var(--darkOlive);
     background-color: var(--cloudyWhite);
     padding-right: 3%;
 }
-
-.image-container {
-    display: grid; 
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-areas:
-        "image-lead image-lead"
-        "image-lead image-lead"
-        "image-minor1 image-minor2"
-        "image-minor3 image-minor4";
-        min-width: 0;
-}
-
 
 #image-lead {
    grid-area: image-lead;
@@ -244,5 +243,3 @@ img {
     margin-left: 50px;
     margin-right: 50px;
 }
-
-
