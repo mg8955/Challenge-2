@@ -22,16 +22,31 @@ body {
 }
 
 header {
-    width: 100%;
     background-color: var(--skyBlue);
     margin: 0;
     padding: 0;
 }
 
-h1 {
+header div h1 {
+    display: inline;
     color: var(--skyBlue);
     background-color: var(--pink2);
-    padding-left: 5%;
+    padding-left: 4%;
+    padding-right: 1%;
+    width: 30%;
+    margin: 0;
+}
+
+h2 {
+    color: var(--skyBlue);
+    background-color: var(--pink2);
+}
+
+header div nav {
+    display: inline;
+    text-align: right;
+    align-content: right;
+    width: 100%;
 }
 
 ul {
@@ -45,11 +60,58 @@ li {
     display: inline-block;
     font-size: 20px;
     font-weight: 900;
+}
 
+main h1 {
+    border-right: 5px solid var(--darkOlive);
 }
 
 p {
     color: var(--darkOlive);
+}
+
+h2 {
+    background-color: var(--skyblue);
+}   
+
+ul li div{
+    display: inline;
+}
+
+a {
+   border-bottom: 5px solid var(darkOlive);
+   text-align: right; 
+}
+
+a:visited {
+    color: var(--darkOlive);
+}
+
+main div img {
+    border: 5px solid var(--tan1);
+    filter: grayscale(75%);
+}
+
+main div img:hover {
+    border: 5px inset var(--tan2);
+    padding: 0;
+    filter: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.sub-head {
+    background-color: var(--skyBlue);
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+#subtitle {
+    background-color: var(--pink2);
 }
 
 .grid-container {
@@ -69,11 +131,15 @@ p {
    grid-area: aboutMeHeader;
    text-align: right;
    align-self: start;
+   /* border-right: 5px solid var(--darkOlive); */
+   margin: 10% 3%;
+   height: 100%;
 }
 
 .aboutMeContent {
     grid-area: aboutMeContent;
     padding-left: 3%;
+    margin: 3%;
 }
 
 .workHeader {
@@ -81,78 +147,102 @@ p {
     height:100%;
     text-align: right;
     align-self: start;
+    /* border-right: 5px solid var(--darkOlive); */
+    margin: 10% 3%;
 }
 
 .workContent {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
+    grid-area: workContent;
     align-self: start;
     padding-left: 3%;
+    margin: 3%;
+    max-height: 100%;
 }
 
 .contactMeHeader {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
+    grid-area: contactMeHeader;
     height:100%;
     text-align: right;
-    align-self: center;
+    align-content: center;
+    /* border-right: 5px solid var(--darkOlive); */
+    margin: 10% 3%;
 }
 
 .contactMeContent {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
+    grid-area: contactMeContent;
     height: 100%;
     align-self: center;
     padding-left: 3%;
+    margin-top: 10%
 }
 
 #body-header {
     color: var(--darkOlive);
     background-color: var(--cloudyWhite);
-    border-right: 5px solid var(--darkOlive);
     padding-right: 3%;
 }
 
 .image-container {
     display: grid; 
-    height: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas:
         "image-lead image-lead"
         "image-lead image-lead"
         "image-minor1 image-minor2"
         "image-minor3 image-minor4";
+        min-width: 0;
 }
+
 
 #image-lead {
    grid-area: image-lead;
-   justify-self: center;
+   margin: 1%;
+   max-width: 100%;
+   height: auto;
+   min-width: 0;
 }
 
 #image-minor1 {
     grid-area: image-minor1;
+    margin: 2%;
+    max-width: 100%;
+   height: auto;
 }
 
 #image-minor2 {
     grid-area: image-minor2;
+    margin: 2%;
+    max-width: 100%;
+   height: auto;
 }
 
 #image-minor3 {
     grid-area: image-minor3;
+    margin: 2%;
+    max-width: 100%;
+   height: auto;
 }
 
 #image-minor4 {
     grid-area: image-minor4;
+    margin: 2%;
+    max-width: 100%;
+   height: auto;
 }
 
 #contactMeContentUl {
     background-color: var(--cloudyWhite);
     border-bottom: 5px solid var(darkOlive);
-    align-content:center;
+    text-align: center;
 }
 
 #contactMeContentList {
+    display: inline;
     color: var(--darkOlive);
     border-bottom: 5px solid var(darkOlive);
+    margin-left: 50px;
+    margin-right: 50px;
 }
+
+
