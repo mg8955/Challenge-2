@@ -1,2 +1,10 @@
-# Challenge-2
-Challenge-2 - Portfolio
+# Professional Portfolio for Michael Gostomski
+By Michael Gostomski
+
+Color Palette Inspiration
+
+[Jimmy Buffet - Volcano](/assets/images/jbvolcanocover.png)
+
+Images generated with DreamStudio
+
+

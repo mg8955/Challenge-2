@@ -16,30 +16,35 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     background-color: var(--cloudyWhite);
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 header {
     background-color: var(--skyBlue);
     margin: 0;
-    padding: 0;
+    padding-top: 10px;
 }
 
 header div h1 {
     display: inline;
     color: var(--skyBlue);
     background-color: var(--pink2);
-    padding-left: 4%;
-    padding-right: 1%;
+    padding-left: 24px;
+    padding-right: 10px;
     width: 30%;
     margin: 0;
 }
 
 h2 {
     color: var(--skyBlue);
-    background-color: var(--pink2);
+    width: 240px;
+    text-align: center;
 }
 
 header div nav {
@@ -60,19 +65,27 @@ li {
     display: inline-block;
     font-size: 20px;
     font-weight: 900;
+    padding-bottom: 10px;
+    padding-right: 30px;
 }
 
-main h1 {
-    border-right: 5px solid var(--darkOlive);
+main {  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: auto;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 0;
 }
 
 p {
     color: var(--darkOlive);
-}
-
-h2 {
-    background-color: var(--skyblue);
-}   
+} 
 
 ul li div{
     display: inline;
@@ -83,18 +96,18 @@ a {
    text-align: right; 
 }
 
-a:visited {
+a:visited, div a {
     color: inherit;
 }
 
 main div img {
     border: 5px solid var(--tan1);
-    filter: grayscale(75%);
+    filter: grayscale(70%);
 }
 
 img {
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
 }
 
 main div img:hover {
@@ -104,32 +117,35 @@ main div img:hover {
 }
 
 .sub-head {
-    background-color: var(--skyBlue);
-    text-align: right;
+    background-color: var(--backgroundBlue);
     margin: 0;
     padding: 0;
+    align-content: flex-end;
 }
-
-.grid-container {
+/* images are overflowing this grid container */
+.main-grid-container {
     display: grid;
-    height:100%;
+    height: 100%;
+    width: 100%;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 25% 65% 10%;
+    grid-template-rows: 15% 75% 10%;
     grid-template-areas:
         "aboutMeHeader aboutMeContent"
         "workHeader workContent"
         "contactMeHeader contactMeContent";
-    margin: 0;
+    margin-right: 10px;
     padding: 0;
 }
 
 .aboutMeHeader {
    grid-area: aboutMeHeader;
    text-align: right;
-   align-self: start;
-   /* border-right: 5px solid var(--darkOlive); */
-   margin: 10% 3%;
-   height: 100%;
+   align-self: auto;
+   border-right: 5px solid var(--darkOlive);
+   /* margin: 10% 3%; */
+   padding-top: 10px;
+   margin: 10px 5px;
+   height: auto;
 }
 
 .aboutMeContent {
@@ -140,22 +156,29 @@ main div img:hover {
 
 .workHeader {
     grid-area: workHeader;
-    height:100%;
+    max-height:100%;
     text-align: right;
-    align-self: start;
-    /* border-right: 5px solid var(--darkOlive); */
-    margin: 10% 3%;
+    align-self: auto;
+    border-right: 5px solid var(--darkOlive);
+    margin: 10px 5px;
+    height: auto;
 }
 
 .workContent {
     grid-area: workContent;
-    align-self: start;
-    padding-left: 3%;
-    margin: 3%;
-    max-height: 100%;
+    align-self: auto;
+    /* padding: 1%; */
+    /* margin: 3%; */
+    height: 100%;
+    width: 100%
 }
 
-.image-container {
+.work-content-size {
+    height: 100%;
+    width: 100;
+}
+
+.work-content-container {
     display: grid; 
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
@@ -164,24 +187,35 @@ main div img:hover {
         "image-lead image-lead"
         "image-minor1 image-minor2"
         "image-minor3 image-minor4";
-        min-width: 0;
+    width: auto;
+    height: auto;
+    padding-bottom: 12px;
+    margin-right: 15px;
 }
 
 .contactMeHeader {
     grid-area: contactMeHeader;
-    height:100%;
+    height:auto;
     text-align: right;
-    align-content: center;
-    /* border-right: 5px solid var(--darkOlive); */
-    margin: 10% 3%;
+    align-self: center;
+    border-right: 5px solid var(--darkOlive);
+    margin: 10px 5px;
 }
 
 .contactMeContent {
     grid-area: contactMeContent;
-    height: 100%;
+    height: auto;
     align-self: center;
-    padding-left: 3%;
-    margin-top: 10%
+    /* align-content: space-around; */
+    /* padding-left: 3%; */
+    margin: 10px 5px;
+}
+
+#navlink {
+    display: inline;
+    border-bottom: 5px solid var(darkOlive);
+    margin-left: 12px;
+    margin-right: 12px;
 }
 
 #subtitle {
@@ -197,42 +231,41 @@ main div img:hover {
 #image-lead {
    grid-area: image-lead;
    margin: 1%;
-   max-width: 100%;
+   width: auto;
    height: auto;
-   min-width: 0;
+   /* min-width: 0; */
 }
 
 #image-minor1 {
     grid-area: image-minor1;
     margin: 2%;
-    max-width: 100%;
-   height: auto;
+    width: auto;
+    height: auto;
 }
 
 #image-minor2 {
     grid-area: image-minor2;
     margin: 2%;
-    max-width: 100%;
-   height: auto;
+    width: auto;
+    height: auto;
 }
 
 #image-minor3 {
     grid-area: image-minor3;
     margin: 2%;
-    max-width: 100%;
-   height: auto;
+    max-width: auto;
+    height: auto;
 }
 
 #image-minor4 {
     grid-area: image-minor4;
     margin: 2%;
-    max-width: 100%;
-   height: auto;
+    max-width: auto;
+    height: auto;
 }
 
 #contactMeContentUl {
     background-color: var(--cloudyWhite);
-    border-bottom: 5px solid var(darkOlive);
     text-align: center;
 }
 
