@@ -1,10 +1,35 @@
 # Professional Portfolio for Michael Gostomski
 By Michael Gostomski
 
+---
+
+## Description
+This portfolio was created using HTML and CSS. It is the first iteration of my Professional Portfolio. It is responsive down to 375px in width.
+
+---
+
+## Installation
+N/A
+
+---
+
+## Usage
+Click the images to view my projects, or the links to contact me.
+
+---
+
+## Credits
+
 Color Palette Inspiration
 
 [Jimmy Buffet - Volcano](/assets/images/jbvolcanocover.png)
 
-Images generated with DreamStudio
+Images generated with [DreamStudio.](https://beta.dreamstudio.ai)
 
-![jbvolcanocover](https://user-images.githubusercontent.com/113604486/192539046-7a6f80c4-f294-4b34-b23e-39d92cf6f816.png)
+---
+
+## License
+
+Please refer to the LICENSE in the repo.
+
+
