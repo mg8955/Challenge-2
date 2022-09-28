@@ -76,13 +76,6 @@ main {
     flex: auto;
 }
 
-main div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    flex: 1 1 0;
-}
-
 p {
     color: var(--darkOlive);
 } 
@@ -96,7 +89,7 @@ a {
    text-align: right; 
 }
 
-a:visited, div a {
+ a:visited, li a { 
     color: inherit;
 }
 
@@ -130,9 +123,9 @@ main div img:hover {
     grid-template-columns: 30% 70%;
     grid-template-rows: 15% 75% 10%;
     grid-template-areas:
-        "aboutMeHeader aboutMeContent"
-        "workHeader workContent"
-        "contactMeHeader contactMeContent";
+        'aboutMeHeader aboutMeContent'
+        'workHeader workContent'
+        'contactMeHeader contactMeContent';
     margin-right: 10px;
     padding: 0;
 }
@@ -183,14 +176,22 @@ main div img:hover {
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
     grid-template-areas:
-        "image-lead image-lead"
-        "image-lead image-lead"
-        "image-minor1 image-minor2"
-        "image-minor3 image-minor4";
+        'image-lead image-lead'
+        'image-lead image-lead'
+        'image-minor1 image-minor2'
+        'image-minor3 image-minor4';
     width: auto;
     height: auto;
     padding-bottom: 12px;
     margin-right: 15px;
+}
+
+.workBoxes {
+    padding: 2% 4%;
+    max-width: auto;
+    height: auto;
+    margin-top: 15px;
+    /* add margin */
 }
 
 .contactMeHeader {
@@ -206,16 +207,9 @@ main div img:hover {
     grid-area: contactMeContent;
     height: auto;
     align-self: center;
-    /* align-content: space-around; */
-    /* padding-left: 3%; */
     margin: 10px 5px;
-}
-
-#navlink {
-    display: inline;
-    border-bottom: 5px solid var(darkOlive);
-    margin-left: 12px;
-    margin-right: 12px;
+    font-weight: 900;
+    color: var(--darkOlive);
 }
 
 #subtitle {
@@ -230,49 +224,66 @@ main div img:hover {
 
 #image-lead {
    grid-area: image-lead;
-   margin: 1%;
+   margin-top: 10px;
+   padding: 0% 2%;
    width: auto;
    height: auto;
-   /* min-width: 0; */
 }
 
 #image-minor1 {
     grid-area: image-minor1;
-    margin: 2%;
-    width: auto;
-    height: auto;
 }
 
 #image-minor2 {
     grid-area: image-minor2;
-    margin: 2%;
-    width: auto;
-    height: auto;
 }
 
 #image-minor3 {
     grid-area: image-minor3;
-    margin: 2%;
-    max-width: auto;
-    height: auto;
 }
 
 #image-minor4 {
     grid-area: image-minor4;
-    margin: 2%;
-    max-width: auto;
-    height: auto;
 }
 
-#contactMeContentUl {
-    background-color: var(--cloudyWhite);
-    text-align: center;
-}
-
-#contactMeContentList {
-    display: inline;
+.contactMeContentList {
+    padding-right: none;
     color: var(--darkOlive);
     border-bottom: 5px solid var(darkOlive);
     margin-left: 50px;
     margin-right: 50px;
+}
+
+@media (max-width: 965px) {
+    p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 630px) {
+    main div h1 {
+        font-size:medium;   
+    }
+    
+    p {
+        font-size: 9px;
+        margin-top: 0px;
+        padding-left: none;
+    }
+
+    .contactMeContent {
+        font-size: x-small;
+    }
+
+    .aboutMeHeader {
+        margin-right: 5px;
+    }
+
+    .aboutMeContent {
+        padding: 0;
+    }
+    
+    .workBoxes {
+        margin-top: 0;
+    }
 }
