@@ -89,7 +89,7 @@ a {
    text-align: right; 
 }
 
- a:visited, li a { 
+a:visited, li a { 
     color: inherit;
 }
 
@@ -100,7 +100,6 @@ main div img {
 
 img {
     max-width: 100%;
-    /* height: auto; */
 }
 
 main div img:hover {
@@ -115,7 +114,7 @@ main div img:hover {
     padding: 0;
     align-content: flex-end;
 }
-/* images are overflowing this grid container */
+
 .main-grid-container {
     display: grid;
     height: 100%;
@@ -135,7 +134,6 @@ main div img:hover {
    text-align: right;
    align-self: auto;
    border-right: 5px solid var(--darkOlive);
-   /* margin: 10% 3%; */
    padding-top: 10px;
    margin: 10px 5px;
    height: auto;
@@ -160,8 +158,6 @@ main div img:hover {
 .workContent {
     grid-area: workContent;
     align-self: auto;
-    /* padding: 1%; */
-    /* margin: 3%; */
     height: 100%;
     width: 100%
 }
@@ -191,7 +187,6 @@ main div img:hover {
     max-width: auto;
     height: auto;
     margin-top: 15px;
-    /* add margin */
 }
 
 .contactMeHeader {
@@ -210,6 +205,14 @@ main div img:hover {
     margin: 10px 5px;
     font-weight: 900;
     color: var(--darkOlive);
+}
+
+.contactMeContentList {
+    padding-right: none;
+    color: var(--darkOlive);
+    border-bottom: 5px solid var(darkOlive);
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #subtitle {
@@ -246,13 +249,7 @@ main div img:hover {
     grid-area: image-minor4;
 }
 
-.contactMeContentList {
-    padding-right: none;
-    color: var(--darkOlive);
-    border-bottom: 5px solid var(darkOlive);
-    margin-left: 50px;
-    margin-right: 50px;
-}
+
 
 @media (max-width: 965px) {
     p {
